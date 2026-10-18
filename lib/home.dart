@@ -136,10 +136,99 @@ class _HomepageState extends State<Homepage> {
                       height:150,
                       width: 190,
                       fit: BoxFit.cover,
-                      )
+                      ),
                   ],
                 ),
               ),
+              SizedBox(height: 10,),
+              Padding(padding: EdgeInsets.all(15),
+
+              child:Row (
+              
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                Text("Stores",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+                ),
+                TextButton(onPressed: (){},
+                 child: Text("See All"),
+                 ),
+
+                ],
+              ), 
+              ),
+              SizedBox(
+                height:65,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.white,
+
+                        ),
+                        SizedBox(height: 4,),
+                        Text("NIKE",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
+                        ),
+
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.white,
+                        ),
+                        SizedBox(height: 4,),
+                        Text("ADIDAS",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
+                        )
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.white,
+                        ),
+                        SizedBox(height: 4,),
+                        Text("FILA",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.white,
+                        ),
+                        SizedBox(height: 4,),
+                        Text("PUMA",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(height: 10,),
+              
+              
           ],
         ),
          ),
