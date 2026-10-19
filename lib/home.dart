@@ -191,8 +191,9 @@ class _HomepageState extends State<Homepage> {
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 15,
+
                         ),
-                        )
+                        ),
                       ],
                     ),
                     Column(
@@ -222,7 +223,7 @@ class _HomepageState extends State<Homepage> {
                         ),
                         ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
