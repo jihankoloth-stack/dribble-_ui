@@ -288,7 +288,8 @@ class _HomepageState extends State<Homepage> {
                             radius: 30,
                             backgroundColor: Colors.white,
                             child: Image.asset("assets/images/reebok.jpg",
-                            width: 50,
+                            width: 40,
+                            height: 40,
                             ),
                           ),
                           SizedBox(height: 5,),
@@ -297,7 +298,7 @@ class _HomepageState extends State<Homepage> {
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
                           ),
-                          )
+                          ),
                         ],
                       ),
                      )
@@ -305,7 +306,103 @@ class _HomepageState extends State<Homepage> {
                   ],
                 ) ,
               ),
-              SizedBox(height: 10,),
+             
+             Padding(
+              padding:EdgeInsets.fromLTRB(15, 20, 15, 10),
+              child: Align(alignment: Alignment.centerLeft,
+              child: Text("Populer Shoes",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18
+              ),
+              ),
+              ),
+              
+               ),
+
+              //  product card.....
+
+              Expanded(
+                child:GridView.count(
+                  padding: EdgeInsets.symmetric(horizontal: 15),
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 12,
+                  mainAxisSpacing: 12,
+                  childAspectRatio: 0.85,
+                  children: [
+                    Card(
+                      elevation: 3,
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadiusGeometry.circular(15),
+                      ),
+                      child: Padding(padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                         Expanded(
+                          child:Container(
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: Colors.amber,
+                            ),
+                            child:Image.asset("assets/images/nike blue.webp",
+                            height: 50,
+                            fit: BoxFit.fitWidth,
+                            ) ,
+                          ),
+                           ),
+                           SizedBox(height: 8,),
+                           Text("Nike Air Max",
+                           style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                           ),
+                           ),
+                           SizedBox(height: 3,),
+                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("6 Colors",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+
+                              ),
+                              ),
+                                Container(
+                                  width: 60,
+                                  height: 31,
+                                  // color: Colors.amber,
+                                  child: OutlinedButton(onPressed: (){},
+                                style: OutlinedButton.styleFrom(
+                                  side: BorderSide(
+                                    width: 2
+                                  ),
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 4,
+                                  vertical:1,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadiusGeometry.circular(15)
+                                )
+                                ),
+                                 child:Text("3999.0"),
+                                 )
+                              
+                                ),
+                            ],
+                           ),
+                          SizedBox(height: 2,)
+                        ],
+                      ),
+                      
+                      ),
+                    ),
+                  ],
+                  ),
+                 )
+
               
               
           ],
