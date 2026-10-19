@@ -161,71 +161,149 @@ class _HomepageState extends State<Homepage> {
               ), 
               ),
               SizedBox(
-                height:65,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                height:87,
+                child:ListView(
+                  scrollDirection: Axis.horizontal,
                   children: [
-                    Column(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.white,
+                    // stores 1
+                    Container(
+                      width: 75,
+                      margin: EdgeInsets.only(left: 15,right: 15),
+                      child: Column(
+                        children: [
+                          CircleAvatar(
+                           radius: 30,
+                           backgroundColor: Colors.white,
+                           child: Image.asset("assets/images/nike.png",
+                           fit: BoxFit.contain,
+                           width: 50,
+                           ),
+                          ),
+                          SizedBox(height: 5,),
+                          Text("NIKE",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: 75,
+                      margin: EdgeInsets.only(right: 15),
+                      child: Column(
+                        children: [
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Colors.white,
+                            child: Image.asset("assets/images/PUMA.png",
+                            fit: BoxFit.contain,
+                            height: 40,
+                            ),
+                          ),
+                          SizedBox(height: 5,),
+                          Text("PUMA",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                          ),
+                        ],
+                      ),
+                    
+                    ),
+                     Container(
+                      width: 75,
+                      margin: EdgeInsets.only(right: 15),
+                      child: Column(
+                        children: [
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Colors.white,
+                            child: Image.asset("assets/images/adidas.jpg",
+                            width: 50,
+                            ),
+                          ),
+                          SizedBox(height: 5,),
+                          Text("ADIDAS",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                          ),
+                        ],
+                      ),
+                     ),
+                     Container(
+                      width: 75,
+                      margin: EdgeInsets.only(right: 15),
+                      child: Column(
+                        children: [
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Colors.white,
+                             child: Image.asset("assets/images/Fila.png",
+                             width: 50,
+                             ),  
+                          ),
+                          SizedBox(height: 5,),
+                          Text("FILA",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                          )
+                        ],
+                      ),
+                     ),
+                     Container(
+                      width: 85,
+                      margin: EdgeInsets.only(right: 10),
+                      child: Column(
+                        children: [
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Colors.white,
+                            child: Image.asset("assets/images/newbalane.png",
+                            height: 40,
+                            ),
+                          ),
+                          SizedBox(height: 5,),
+                          Text("NB",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                          ),
+                        ],
+                      ),
+                     ),
+                     Container(
+                      width: 75,
+                      margin: EdgeInsets.only(right: 15),
+                      child: Column(
+                        children: [
+                          CircleAvatar(
+                            radius: 30,
+                            backgroundColor: Colors.white,
+                            child: Image.asset("assets/images/reebok.jpg",
+                            width: 50,
+                            ),
+                          ),
+                          SizedBox(height: 5,),
+                          Text("REEBOK",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                          )
+                        ],
+                      ),
+                     )
 
-                        ),
-                        SizedBox(height: 4,),
-                        Text("NIKE",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
-                        ),
-
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.white,
-                        ),
-                        SizedBox(height: 4,),
-                        Text("ADIDAS",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-
-                        ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.white,
-                        ),
-                        SizedBox(height: 4,),
-                        Text("FILA",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.white,
-                        ),
-                        SizedBox(height: 4,),
-                        Text("PUMA",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
-                        ),
-                      ],
-                    ),
                   ],
-                ),
+                ) ,
               ),
               SizedBox(height: 10,),
               
