@@ -379,6 +379,8 @@ class _HomepageState extends State<Homepage> {
                                   side: BorderSide(
                                     width: 2
                                   ),
+                                  backgroundColor: Colors.black,
+                                  foregroundColor: Colors.white,
                                 padding: EdgeInsets.symmetric(
                                   horizontal: 4,
                                   vertical:1,
@@ -399,6 +401,174 @@ class _HomepageState extends State<Homepage> {
                       
                       ),
                     ),
+                    Card(
+                      elevation: 3,
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadiusGeometry.circular(15)
+                      ),
+                      child: Padding(padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child:Container(
+                              width: double.infinity ,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+
+                              ),
+                              
+                             child: Image.asset("assets/images/nike_gray-removebg-preview.png",
+                            fit: BoxFit.fitWidth,
+                             ),
+
+                            ),
+                           ),
+                           SizedBox(height: 8,),
+                           Text("Nike Air 43",
+                           style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15
+                           ),
+                           ),
+                           SizedBox(height: 5,),
+                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("3 Colors",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                              ),
+                              Container(
+                                width: 60,
+                                height: 30,
+                                child: OutlinedButton(onPressed: (){},
+                                style: OutlinedButton.styleFrom(
+                                  backgroundColor: Colors.black,
+                                  foregroundColor: Colors.white,
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 4,
+                                    vertical: 1,
+                                  ),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15),
+                                  ),
+                                ),
+                                 child: Text("4399.0"),
+                                 ),
+                              ),
+                            ],
+                           ),
+                        ],
+                      ),
+                      ),
+                    ),
+                    Card(
+                      elevation: 3,
+                      color: Colors.white,
+                      child:Padding(
+                      padding: EdgeInsets.all(10),
+                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Container(
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                             child: Image.asset("assets/images/nike_black-removebg-preview.png"),
+
+                            ) ,
+                            ),
+                            SizedBox(height: 5,),
+                            Text("Nike Air 45",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                            ),
+                            SizedBox(height: 5,),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text("4 Colors",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,                                ),
+                                ),
+                                Container(
+                                  width: 60,
+                                  height:30 ,
+                                  child: OutlinedButton(onPressed: (){},
+                                  style: OutlinedButton.styleFrom(
+                                    padding: EdgeInsets.all(1),
+                                    backgroundColor: Colors.black,
+                                    foregroundColor: Colors.white,
+                                  ),
+                                   child: Text("2999.0"),
+                                   ),
+                                )
+                              ],
+                            )
+                        ],
+                       ),
+                      ),
+                    ),
+                    Card(
+                      color: Colors.white,
+                      child: Padding(padding:EdgeInsets.all(10) ,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child:Container(
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12)
+                              ),
+                              child: Image.asset("assets/images/nike_green-removebg-preview.png",
+                              fit: BoxFit.fitWidth,
+                              ),
+                            ) ,
+                          ),
+                          SizedBox(height: 5,),
+                          Text("Nike Ari 66",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                          ),
+                          SizedBox(height: 5,),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("2 Colors",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                              ),
+                              Container(
+                                width: 60,
+                                height: 30,
+                                child: OutlinedButton(onPressed: (){},
+                                style: OutlinedButton.styleFrom(
+                                  padding: EdgeInsets.all(1),
+                                  backgroundColor: Colors.black,
+                                  foregroundColor: Colors.white,
+                                ),
+                                 child: Text("3499.0")
+                                 ),
+                              )
+                            ],
+                          )
+                        ],
+                      )
+                      ),
+                    
+                    )
+                    
                   ],
                   ),
                  )
