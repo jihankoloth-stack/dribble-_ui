@@ -15,10 +15,9 @@ class _BottomnavbarState extends State<Bottomnavbar> {
   int currenIndex=0;
   final List <Widget> pages=[
   Homepage(),
-  Accountpage(),
-  Shopping(),
   Wishlist(),
-
+  Shopping(),
+  Accountpage(),
   ];
   @override
   Widget build(BuildContext context) {
