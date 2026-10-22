@@ -32,7 +32,8 @@ class _WishlistState extends State<Wishlist> {
                   ),
                   ),
                   IconButton(onPressed: (){},
-                   icon: Icon(Icons.share),),
+                   icon: Icon(Icons.share),
+                   ),
                 ],
 
               ),
