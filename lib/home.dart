@@ -12,31 +12,6 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffffe5eb),
-      // appBar: AppBar(
-      //   centerTitle: true,
-      //   title: Text("NIKE",
-      //   style: TextStyle(
-      //     color: Colors.white,
-      //     fontWeight: FontWeight.bold,
-      //   ),
-      //   ),
-      // backgroundColor: Colors.black,
-      // shape: RoundedRectangleBorder(
-      //   borderRadius: BorderRadius.vertical(bottom: Radius.circular(20),),
-      // ),
-      // leading: IconButton(onPressed: (){}, 
-      // icon: Icon(Icons.person,
-      // color: Colors.white,
-      // ),
-      // ),
-      // actions: [
-      //   IconButton(onPressed: (){},
-      //    icon: Icon(Icons.more_vert,
-      //    color: Colors.white,
-      //    ),
-      //    ),
-      // ],
-      // ),
       body:SafeArea(
         child:Column(
           children: [
@@ -496,7 +471,8 @@ class _HomepageState extends State<Homepage> {
                               children: [
                                 Text("4 Colors",
                                 style: TextStyle(
-                                  fontWeight: FontWeight.bold,                                ),
+                                  fontWeight: FontWeight.bold,
+                                   ),
                                 ),
                                 Container(
                                   width: 60,
@@ -517,6 +493,7 @@ class _HomepageState extends State<Homepage> {
                       ),
                     ),
                     Card(
+                      elevation: 3,
                       color: Colors.white,
                       child: Padding(padding:EdgeInsets.all(10) ,
                       child: Column(
@@ -578,6 +555,10 @@ class _HomepageState extends State<Homepage> {
           ],
         ),
          ),
-    );
+        
+      
+          );
+    
+    
   }
 }

@@ -1,3 +1,4 @@
+import 'package:dribble_ui/bottomnavbar.dart';
 import 'package:dribble_ui/home.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,8 @@ class _LoginpageState extends State<Loginpage> {
     if (username == "jihan"&&password=="123"){
       Navigator.pushReplacement(context,
       MaterialPageRoute(
-        builder:(Context)=> Homepage(),
+        // ignore: non_constant_identifier_names
+        builder:(Context)=> Bottomnavbar(),
         ),
       );
     }else{
