@@ -70,7 +70,7 @@ class _ShoppingState extends State<Shopping> {
                           ),
 
                         ],
-                      ) 
+                      ) ,
                       ),
                       SizedBox(width: 10,),
                       Text("\$40",
@@ -78,14 +78,97 @@ class _ShoppingState extends State<Shopping> {
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                       ),
-                      )
-                     ]
-                    )
+                      ),
+                      
+                     ],
+                    ),
+                  ),
+                  SizedBox(height: 20,),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.only(bottom: 15),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 100,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            color: Colors.amber,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Image.asset("assets/images/nike_black-removebg-preview.png",
+                          fit: BoxFit.contain,
+                          ),
+                        ),
+                        SizedBox(width: 12,),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("NIKE AIR jordan 45",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize:16
+                              ),
+                              ),
+                              Text("blackyy",
+                              style:TextStyle(
+                                fontWeight: FontWeight.bold,
+                              )
+                              ),
+                              SizedBox(height: 15,),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                               children: [
+                              Text("\$400.00",
+                              style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal:20,
+                                  vertical: 2,
+                                ),
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Colors.black,
+                                    width: 2,
+                                  ),
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                                child:Row(
+                                  children: [
+                                    Icon(Icons.remove,
+                                    size: 17,
+                                    ),
+                                    Text("1"),
+                                    Icon(Icons.add,
+                                    size: 19,
+                                    ),
+                                  ],
+                                ),
+                              
+                              ),
+                                ],
+                              )
+
+                            ],
+                          )
+                          ),
+                      ],
+                    ),
                   )
                 ],
 
-              ) 
-            )
+              ) ,
+            ),
               
           ],
         )
