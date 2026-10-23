@@ -90,6 +90,12 @@ class _ShoppingState extends State<Shopping> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black12,
+                          blurRadius: 6,
+                        )
+                      ]
 
                     ),
                     child: Row(
@@ -98,7 +104,8 @@ class _ShoppingState extends State<Shopping> {
                           width: 100,
                           height: 100,
                           decoration: BoxDecoration(
-                            color: Colors.amber,
+                           
+                            // color: Colors.amber,
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Image.asset("assets/images/nike_black-removebg-preview.png",
@@ -133,7 +140,7 @@ class _ShoppingState extends State<Shopping> {
                               ),
                               Container(
                                 padding: EdgeInsets.symmetric(
-                                  horizontal:20,
+                                  horizontal:13,
                                   vertical: 2,
                                 ),
                                 decoration: BoxDecoration(
@@ -141,7 +148,7 @@ class _ShoppingState extends State<Shopping> {
                                     color: Colors.black,
                                     width: 2,
                                   ),
-                                  borderRadius: BorderRadius.circular(15),
+                                  borderRadius: BorderRadius.circular(10),
                                 ),
                                 child:Row(
                                   children: [
@@ -164,7 +171,216 @@ class _ShoppingState extends State<Shopping> {
                           ),
                       ],
                     ),
-                  )
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                      boxShadow: [
+                       BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 6,
+                       )
+                      ]
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 100,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12)
+                          ),
+                          child: Image.asset("assets/images/nike_green-removebg-preview.png"),
+
+                        ),
+                        SizedBox(width: 10,),
+                        Expanded(
+                          child:Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                             Text("NIKE AIR Max 95 ",
+                             style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                             ),
+                             ),
+                             Text("Dark Smoke Grey",
+                             style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                             ),
+                             ),
+                             SizedBox(height: 20,),
+                             Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text("\$500.00",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                ),
+                                Container(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 13,
+                                    vertical: 2
+                                  ),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: Colors.black,
+                                      width: 2,
+                                    ),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Row(
+                                    children: [
+                                      Icon(Icons.remove,
+                                      size: 17,
+                                      ),
+                                      Text("1"),
+                                      Icon(Icons.add,
+                                      size: 19,
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                             ),
+                            ],
+                          ) 
+                          )
+
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 20,),
+                  Container(
+                  padding: EdgeInsets.symmetric(horizontal: 12),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Row(
+                      children: [
+                          Expanded(
+                            child:TextField(
+                              decoration: InputDecoration(
+                                hintText: "Enter promp code",
+                                border:InputBorder.none,
+                              ),
+                            ),
+                             ),
+                           ElevatedButton(onPressed: (){},
+                           style: ElevatedButton.styleFrom(
+                            foregroundColor: Colors.black,
+                           ),
+                            child:Text("APPLY"),
+                            ),  
+                      ],
+                    )
+                    ),
+                    SizedBox(height: 15,),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text("Subtotal",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17,
+                                ),
+                                ),
+                                Text("\$900.00",
+                                style:TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                )
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 25,),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                               Text("Discount",
+                               style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 17,
+                               ),
+                               ),
+                               Text("-\$100.00",
+                               style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.green,
+                               ),
+                               ),
+                              ],
+                            ),
+                            SizedBox(height: 20,),
+                            Row(
+                              mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text("Shipping",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17,
+                                ),
+                                ),
+                                Text("Free",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.green,
+                                ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 15,),
+                            Divider(height: 1,),
+                            SizedBox(height: 15,),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text("Total",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                ),
+                                Text("\$800.00",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold
+                                ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 10,),
+                            Divider(height: 1,),
+                            SizedBox(height: 10,),
+                            SizedBox(
+                              height: 50,
+                              width: double.infinity,
+                              child: ElevatedButton(onPressed: (){},
+                              style: ElevatedButton.styleFrom(
+                                foregroundColor: Colors.black,
+                                backgroundColor: Colors.white,
+                                shape: ContinuousRectangleBorder(borderRadius: BorderRadiusGeometry.circular(12))
+                              ),
+                               child: Text("Proceed to Checkout",
+                               
+                               )
+                               ),
+                            )
+                          ],
+                        ),
+                      
+                        
+                      ),
+                  
                 ],
 
               ) ,
