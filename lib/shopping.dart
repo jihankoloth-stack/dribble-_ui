@@ -1,3 +1,4 @@
+import 'package:dribble_ui/Home2.dart';
 import 'package:flutter/material.dart';
 
 class Shopping extends StatefulWidget {
@@ -364,7 +365,12 @@ class _ShoppingState extends State<Shopping> {
                             SizedBox(
                               height: 50,
                               width: double.infinity,
-                              child: ElevatedButton(onPressed: (){},
+                              child: ElevatedButton(onPressed: (){
+                                Navigator.push(context,
+                                MaterialPageRoute(
+                                  builder: (contaxt)=>Home2(),),
+                                  );
+                              },
                               style: ElevatedButton.styleFrom(
                                 foregroundColor: Colors.black,
                                 backgroundColor: Colors.white,

@@ -1,4 +1,3 @@
-import 'package:dribble_ui/home.dart';
 import 'package:flutter/material.dart';
 
 class Wishlist extends StatefulWidget {
@@ -67,7 +66,7 @@ class _WishlistState extends State<Wishlist> {
                                 height: 135,
                                 ),
                               ),
-                              const Positioned(
+                              Positioned(
                                 top: 8,
                                 left: 8,
                                  child:Icon(Icons.favorite,
