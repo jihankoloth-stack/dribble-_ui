@@ -1,6 +1,6 @@
 import 'package:dribble_ui/bottomnavbar.dart';
-import 'package:dribble_ui/home.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Loginpage extends StatefulWidget {
   const new({super.key});
@@ -13,17 +13,19 @@ class _LoginpageState extends State<Loginpage> {
   final usernameController= TextEditingController();
   final passwordController=TextEditingController();
 
-  void login(){
+  Future<void> login()async{
     String username= usernameController.text;
     String password= passwordController.text;
 
     if (username == "jihan"&&password=="123"){
-      Navigator.pushReplacement(context,
-      MaterialPageRoute(
-        // ignore: non_constant_identifier_names
-        builder:(Context)=> Bottomnavbar(),
-        ),
+    final prefs= await SharedPreferences.getInstance();
+    await prefs.setBool("isLoggedin", true);
+    if (!mounted) return;
+    Navigator.pushReplacement(context,
+     MaterialPageRoute(
+      builder:(context)=>Bottomnavbar(),),
       );
+     
     }else{
       showDialog(context:context,
       builder: (context){

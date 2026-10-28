@@ -1,8 +1,10 @@
+import 'package:dribble_ui/bottomnavbar.dart';
 import 'package:dribble_ui/login.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Splashscreen extends StatefulWidget {
-  const new({super.key});
+  const Splashscreen({super.key});
 
   @override
   State<Splashscreen> createState() => _SplashscreenState();
@@ -12,17 +14,23 @@ class _SplashscreenState extends State<Splashscreen> {
   @override
   void initState() {
     super.initState();
-
-    // Timer(
-    //   Duration(seconds: 3),(){
-    //     Navigator.pushReplacement(
-    //       context,
-    //       MaterialPageRoute(
-    //         builder:((context) => Loginpage()) 
-    //         )
-    //       )
-    //   }
-    // );
+     checkLogin();
+  }
+  Future<void>checkLogin()async{
+   final prefs= await SharedPreferences.getInstance();
+   final isLoggedin= prefs.getBool("isLoggedin")?? false;
+   if(!mounted) return;
+   if (isLoggedin){
+     Navigator.pushReplacement(context, MaterialPageRoute(
+      builder: (context)=>Bottomnavbar(),
+      ),
+      );
+   }else{
+    Navigator.pushReplacement(context, MaterialPageRoute(
+      builder:(context)=>Loginpage(),
+      ),
+      );
+   }
   }
   @override
   Widget build(BuildContext context) {
