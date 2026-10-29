@@ -4,7 +4,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class Loginpage extends StatefulWidget {
   const new({super.key});
-
   @override
   State<Loginpage> createState() => _LoginpageState();
 }
@@ -209,14 +208,11 @@ class _LoginpageState extends State<Loginpage> {
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                         fontSize: 14,
-
                       ),
                       ),
                     ),
-
                   ],
                 ),
-              
             ],
           ),
         ),
