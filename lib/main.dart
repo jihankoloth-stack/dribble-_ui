@@ -1,10 +1,10 @@
 import 'package:dribble_ui/Splashscreen.dart';
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
   runApp(JKapp());
-
 }
+
 class JKapp extends StatelessWidget {
   const new({super.key});
 
