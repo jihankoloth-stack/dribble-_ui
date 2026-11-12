@@ -12,84 +12,80 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffffe5eb),
-      body:SafeArea(
-        child:Column(
+      body: SafeArea(
+        child: Column(
           children: [
             // top appbar
             Padding(
-              padding:EdgeInsets.all(15),
+              padding: EdgeInsets.all(15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                CircleAvatar(
-                  backgroundColor: Colors.white,
-                  child: IconButton(onPressed: (){},
-                   icon: Icon(Icons.person,
-                   size: 25,
-                   ),
-                   ),
-                ),
-                Text("Nike Air Max",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-
-                ),
-                ),
-                CircleAvatar(
-                  backgroundColor: Colors.white,
-                  child: IconButton(onPressed: (){}, 
-                  icon: Icon(Icons.notifications_none,
-                  size: 25,
+                  CircleAvatar(
+                    backgroundColor: Colors.white,
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.person, size: 25),
+                    ),
                   ),
-                  )
-                ),
-
+                  Text(
+                    "Nike Air Max",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Colors.white,
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.notifications_none, size: 25),
+                    ),
+                  ),
                 ],
               ),
-              
-               ),
+            ),
 
-              //  banner
-              Container(
-                height: 140,
-                width: double.infinity,
-                margin: EdgeInsets.symmetric(horizontal:15 ),
-                padding: EdgeInsets.all(15),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(18),
-   // search
-                 gradient: LinearGradient(
+            //  banner
+            Container(
+              height: 140,
+              width: double.infinity,
+              margin: EdgeInsets.symmetric(horizontal: 15),
+              padding: EdgeInsets.all(15),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(18),
+                // search
+                gradient: LinearGradient(
                   colors: [
                     Color.fromARGB(255, 88, 3, 3),
                     Color.fromARGB(255, 57, 4, 4),
                   ],
                 ),
-                ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text("AIR",
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "AIR",
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
-                            color:Colors.white,
+                            color: Colors.white,
                           ),
-                          ),
-                          SizedBox(height: 5,),
-                          Text('Nike/n20% off',
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          'Nike/n20% off',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
                           ),
-                          ),
-                          SizedBox(height: 5,),
-                          ElevatedButton(onPressed: (){},
+                        ),
+                        SizedBox(height: 5),
+                        ElevatedButton(
+                          onPressed: () {},
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.white,
                             foregroundColor: Colors.black,
@@ -98,354 +94,356 @@ class _HomepageState extends State<Homepage> {
                               vertical: 4,
                             ),
                           ),
-                           child: Text("Shop Now",
-                           style: TextStyle(
-                            fontSize: 11
-                           ),
-                           ),
-                           ),
-                        ],
-                      ),
-                      ),
-                      Image.asset("assets/images/jordan_black-removebg-preview.png",
-                      height:150,
-                      width: 190,
-                      fit: BoxFit.cover,
-                      ),
-                  ],
-                ),
+                          child: Text(
+                            "Shop Now",
+                            style: TextStyle(fontSize: 11),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Image.asset(
+                    "assets/images/jordan_black-removebg-preview.png",
+                    height: 150,
+                    width: 190,
+                    fit: BoxFit.cover,
+                  ),
+                ],
               ),
-              SizedBox(height: 10,),
-              Padding(padding: EdgeInsets.all(15),
+            ),
+            SizedBox(height: 10),
+            Padding(
+              padding: EdgeInsets.all(15),
 
-              child:Row (
-              
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                Text("Stores",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),
-                ),
-                TextButton(onPressed: (){},
-                 child: Text("See All"),
-                 ),
-
+                  Text(
+                    "Stores",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  TextButton(onPressed: () {}, child: Text("See All")),
                 ],
-              ), 
               ),
-              SizedBox(
-                height:87,
-                child:ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    // stores 1
-                    Container(
-                      width: 75,
-                      margin: EdgeInsets.only(left: 15,right: 15),
-                      child: Column(
-                        children: [
-                          CircleAvatar(
-                           radius: 30,
-                           backgroundColor: Colors.white,
-                           child: Image.asset("assets/images/nike.png",
-                           fit: BoxFit.contain,
-                           width: 50,
-                           ),
+            ),
+            SizedBox(
+              height: 87,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  // stores 1
+                  Container(
+                    width: 75,
+                    margin: EdgeInsets.only(left: 15, right: 15),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Colors.white,
+                          child: Image.asset(
+                            "assets/images/nike.png",
+                            fit: BoxFit.contain,
+                            width: 50,
                           ),
-                          SizedBox(height: 5,),
-                          Text("NIKE",
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          "NIKE",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
                           ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                    Container(
-                      width: 75,
-                      margin: EdgeInsets.only(right: 15),
-                      child: Column(
-                        children: [
-                          CircleAvatar(
-                            radius: 30,
-                            backgroundColor: Colors.white,
-                            child: Image.asset("assets/images/PUMA.png",
+                  ),
+                  Container(
+                    width: 75,
+                    margin: EdgeInsets.only(right: 15),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Colors.white,
+                          child: Image.asset(
+                            "assets/images/PUMA.png",
                             fit: BoxFit.contain,
                             height: 40,
-                            ),
                           ),
-                          SizedBox(height: 5,),
-                          Text("PUMA",
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          "PUMA",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
                           ),
-                          ),
-                        ],
-                      ),
-                    
+                        ),
+                      ],
                     ),
-                     Container(
-                      width: 75,
-                      margin: EdgeInsets.only(right: 15),
-                      child: Column(
-                        children: [
-                          CircleAvatar(
-                            radius: 30,
-                            backgroundColor: Colors.white,
-                            child: Image.asset("assets/images/adidas.jpg",
+                  ),
+                  Container(
+                    width: 75,
+                    margin: EdgeInsets.only(right: 15),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Colors.white,
+                          child: Image.asset(
+                            "assets/images/adidas.jpg",
                             width: 50,
-                            ),
                           ),
-                          SizedBox(height: 5,),
-                          Text("ADIDAS",
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          "ADIDAS",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
                           ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 75,
+                    margin: EdgeInsets.only(right: 15),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Colors.white,
+                          child: Image.asset(
+                            "assets/images/Fila.png",
+                            width: 50,
                           ),
-                        ],
-                      ),
-                     ),
-                     Container(
-                      width: 75,
-                      margin: EdgeInsets.only(right: 15),
-                      child: Column(
-                        children: [
-                          CircleAvatar(
-                            radius: 30,
-                            backgroundColor: Colors.white,
-                             child: Image.asset("assets/images/Fila.png",
-                             width: 50,
-                             ),  
-                          ),
-                          SizedBox(height: 5,),
-                          Text("FILA",
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          "FILA",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
                           ),
-                          )
-                        ],
-                      ),
-                     ),
-                     Container(
-                      width: 85,
-                      margin: EdgeInsets.only(right: 10),
-                      child: Column(
-                        children: [
-                          CircleAvatar(
-                            radius: 30,
-                            backgroundColor: Colors.white,
-                            child: Image.asset("assets/images/newbalane.png",
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 85,
+                    margin: EdgeInsets.only(right: 10),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Colors.white,
+                          child: Image.asset(
+                            "assets/images/newbalane.png",
                             height: 40,
-                            ),
                           ),
-                          SizedBox(height: 5,),
-                          Text("NB",
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          "NB",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
                           ),
-                          ),
-                        ],
-                      ),
-                     ),
-                     Container(
-                      width: 75,
-                      margin: EdgeInsets.only(right: 15),
-                      child: Column(
-                        children: [
-                          CircleAvatar(
-                            radius: 30,
-                            backgroundColor: Colors.white,
-                            child: Image.asset("assets/images/reebok.jpg",
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 75,
+                    margin: EdgeInsets.only(right: 15),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Colors.white,
+                          child: Image.asset(
+                            "assets/images/reebok.jpg",
                             width: 40,
                             height: 40,
-                            ),
                           ),
-                          SizedBox(height: 5,),
-                          Text("REEBOK",
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          "REEBOK",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
                           ),
-                          ),
-                        ],
-                      ),
-                     )
-
-                  ],
-                ) ,
-              ),
-             
-             Padding(
-              padding:EdgeInsets.fromLTRB(15, 20, 15, 10),
-              child: Align(alignment: Alignment.centerLeft,
-              child: Text("Populer Shoes",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 18
-              ),
-              ),
-              ),
-              
-               ),
-
-              //  product card.....
-
-              Expanded(
-                child:GridView.count(
-                  padding: EdgeInsets.symmetric(horizontal: 15),
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 12,
-                  mainAxisSpacing: 12,
-                  childAspectRatio: 0.85,
-                  children: [
-                    Card(
-                      elevation: 3,
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadiusGeometry.circular(15),
-                      ),
-                      child: Padding(padding: EdgeInsets.all(10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                         Expanded(
-                          child:Container(
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              color: Colors.amber,
-                            ),
-                            child:Image.asset("assets/images/nike blue.webp",
-                            height: 50,
-                            fit: BoxFit.fitWidth,
-                            ) ,
-                          ),
-                           ),
-                           SizedBox(height: 8,),
-                           Text("Nike Air Max",
-                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15,
-                           ),
-                           ),
-                           SizedBox(height: 3,),
-                           Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text("6 Colors",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-
-                              ),
-                              ),
-                                Container(
-                                  width: 60,
-                                  height: 31,
-                                  // color: Colors.amber,
-                                  child: OutlinedButton(onPressed: (){},
-                                style: OutlinedButton.styleFrom(
-                                  side: BorderSide(
-                                    width: 2
-                                  ),
-                                  backgroundColor: Colors.black,
-                                  foregroundColor: Colors.white,
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: 4,
-                                  vertical:1,
-                                ),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadiusGeometry.circular(15)
-                                )
-                                ),
-                                 child:Text("3999.0"),
-                                 )
-                              
-                                ),
-                            ],
-                           ),
-                          SizedBox(height: 2,)
-                        ],
-                      ),
-                      
-                      ),
+                        ),
+                      ],
                     ),
-                    Card(
-                      elevation: 3,
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadiusGeometry.circular(15)
-                      ),
-                      child: Padding(padding: EdgeInsets.all(10),
+                  ),
+                ],
+              ),
+            ),
+
+            Padding(
+              padding: EdgeInsets.fromLTRB(15, 20, 15, 10),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Populer Shoes",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                ),
+              ),
+            ),
+
+            //  product card.....
+            Expanded(
+              child: GridView.count(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                crossAxisCount: 2,
+                crossAxisSpacing: 12,
+                mainAxisSpacing: 12,
+                childAspectRatio: 0.85,
+                children: [
+                  Card(
+                    elevation: 3,
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadiusGeometry.circular(15),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Expanded(
-                            child:Container(
-                              width: double.infinity ,
+                            child: Container(
+                              width: double.infinity,
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-
+                                borderRadius: BorderRadius.circular(12),
+                                color: Colors.amber,
                               ),
-                              
-                             child: Image.asset("assets/images/nike_gray-removebg-preview.png",
-                            fit: BoxFit.fitWidth,
-                             ),
-
+                              child: Image.asset(
+                                "assets/images/nike blue.webp",
+                                height: 50,
+                                fit: BoxFit.fitWidth,
+                              ),
                             ),
-                           ),
-                           SizedBox(height: 8,),
-                           Text("Nike Air 43",
-                           style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15
-                           ),
-                           ),
-                           SizedBox(height: 5,),
-                           Row(
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            "Nike Air Max",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                          SizedBox(height: 3),
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("3 Colors",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                              Text(
+                                "6 Colors",
+                                style: TextStyle(fontWeight: FontWeight.bold),
                               ),
+                              Container(
+                                width: 60,
+                                height: 31,
+                                // color: Colors.amber,
+                                child: OutlinedButton(
+                                  onPressed: () {},
+                                  style: OutlinedButton.styleFrom(
+                                    side: BorderSide(width: 2),
+                                    backgroundColor: Colors.black,
+                                    foregroundColor: Colors.white,
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 4,
+                                      vertical: 1,
+                                    ),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadiusGeometry.circular(15),
+                                    ),
+                                  ),
+                                  child: Text("3999.0"),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 2),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Card(
+                    elevation: 3,
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadiusGeometry.circular(15),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Container(
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+
+                              child: Image.asset(
+                                "assets/images/nike_gray-removebg-preview.png",
+                                fit: BoxFit.fitWidth,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            "Nike Air 43",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "3 Colors",
+                                style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                               Container(
                                 width: 60,
                                 height: 30,
-                                child: OutlinedButton(onPressed: (){},
-                                style: OutlinedButton.styleFrom(
-                                  backgroundColor: Colors.black,
-                                  foregroundColor: Colors.white,
-                                  padding: EdgeInsets.symmetric(
-                                    horizontal: 4,
-                                    vertical: 1,
+                                child: OutlinedButton(
+                                  onPressed: () {},
+                                  style: OutlinedButton.styleFrom(
+                                    backgroundColor: Colors.black,
+                                    foregroundColor: Colors.white,
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 4,
+                                      vertical: 1,
+                                    ),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15),
+                                    ),
                                   ),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
+                                  child: Text("4399.0"),
                                 ),
-                                 child: Text("4399.0"),
-                                 ),
                               ),
                             ],
-                           ),
+                          ),
                         ],
                       ),
-                      ),
                     ),
-                    Card(
-                      elevation: 3,
-                      color: Colors.white,
-                      child:Padding(
+                  ),
+                  Card(
+                    elevation: 3,
+                    color: Colors.white,
+                    child: Padding(
                       padding: EdgeInsets.all(10),
-                       child: Column(
+                      child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Expanded(
@@ -454,111 +452,107 @@ class _HomepageState extends State<Homepage> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                             child: Image.asset("assets/images/nike_black-removebg-preview.png"),
-
-                            ) ,
+                              child: Image.asset(
+                                "assets/images/nike_black-removebg-preview.png",
+                              ),
                             ),
-                            SizedBox(height: 5,),
-                            Text("Nike Air 45",
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            "Nike Air 45",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 15,
                             ),
-                            ),
-                            SizedBox(height: 5,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text("4 Colors",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                   ),
-                                ),
-                                Container(
-                                  width: 60,
-                                  height:30 ,
-                                  child: OutlinedButton(onPressed: (){},
+                          ),
+                          SizedBox(height: 5),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "4 Colors",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Container(
+                                width: 60,
+                                height: 30,
+                                child: OutlinedButton(
+                                  onPressed: () {},
                                   style: OutlinedButton.styleFrom(
                                     padding: EdgeInsets.all(1),
                                     backgroundColor: Colors.black,
                                     foregroundColor: Colors.white,
                                   ),
-                                   child: Text("2999.0"),
-                                   ),
-                                )
-                              ],
-                            )
+                                  child: Text("2999.0"),
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
-                       ),
                       ),
                     ),
-                    Card(
-                      elevation: 3,
-                      color: Colors.white,
-                      child: Padding(padding:EdgeInsets.all(10) ,
+                  ),
+                  Card(
+                    elevation: 3,
+                    color: Colors.white,
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Expanded(
-                            child:Container(
+                            child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12)
+                                borderRadius: BorderRadius.circular(12),
                               ),
-                              child: Image.asset("assets/images/nike_green-removebg-preview.png",
-                              fit: BoxFit.fitWidth,
+                              child: Image.asset(
+                                "assets/images/nike_green-removebg-preview.png",
+                                fit: BoxFit.fitWidth,
                               ),
-                            ) ,
+                            ),
                           ),
-                          SizedBox(height: 5,),
-                          Text("Nike Ari 66",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15,
+                          SizedBox(height: 5),
+                          Text(
+                            "Nike Ari 66",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
                           ),
-                          ),
-                          SizedBox(height: 5,),
+                          SizedBox(height: 5),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("2 Colors",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
+                              Text(
+                                "2 Colors",
+                                style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                               Container(
                                 width: 60,
                                 height: 30,
-                                child: OutlinedButton(onPressed: (){},
-                                style: OutlinedButton.styleFrom(
-                                  padding: EdgeInsets.all(1),
-                                  backgroundColor: Colors.black,
-                                  foregroundColor: Colors.white,
+                                child: OutlinedButton(
+                                  onPressed: () {},
+                                  style: OutlinedButton.styleFrom(
+                                    padding: EdgeInsets.all(1),
+                                    backgroundColor: Colors.black,
+                                    foregroundColor: Colors.white,
+                                  ),
+                                  child: Text("3499.0"),
                                 ),
-                                 child: Text("3499.0")
-                                 ),
-                              )
+                              ),
                             ],
-                          )
+                          ),
                         ],
-                      )
                       ),
-                    
-                    )
-                    
-                  ],
+                    ),
                   ),
-                 )
-
-              
-              
+                ],
+              ),
+            ),
           ],
         ),
-         ),
-        
-      
-          );
-    
-    
+      ),
+    );
   }
 }
