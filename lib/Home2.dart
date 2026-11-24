@@ -49,6 +49,8 @@ class _Home2State extends State<Home2> {
                 // },
 
                 
+
+                
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return "enter usernsme";
